@@ -1,7 +1,8 @@
 pipeline {
     agent {
         kubernetes {
-            label 'molgenis-jdk11'
+            // the shared pod template defined in the Jenkins server config
+            inheritFrom 'molgenis-jdk11'
         }
     }
     environment {
